@@ -1,0 +1,185 @@
+/* FILE: common.css */
+body {
+    font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
+    background: #f0f2f5; /* Facebook Light Gray Background */
+    margin: 0;
+    padding: 0;
+    color: #1c1e21;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+
+/* --- LOGO STYLE --- */
+.fb-logo {
+    font-family: 'Klavika', Helvetica, Arial, sans-serif; /* mimic FB font */
+    font-size: 50px;
+    font-weight: bold;
+    color: #1877f2; /* Facebook Blue */
+    margin: 20px 0 10px 0;
+    text-decoration: none;
+    letter-spacing: -2px;
+}
+
+.container {
+    width: 432px; /* Facebook card width */
+    padding: 15px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Header text inside the card */
+.header-main {
+    font-size: 25px;
+    line-height: 32px;
+    font-weight: 800;
+    margin-bottom: 0;
+    color: #1c1e21;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.header-sub {
+    font-size: 15px;
+    line-height: 24px;
+    color: #606770;
+    margin-top: 0;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #dadde1;
+    padding-bottom: 15px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Form Elements */
+.input-group {
+    margin-bottom: 12px;
+    text-align: left;
+}
+
+/* For the Side-by-Side Name fields */
+.row-split {
+    display: flex;
+    gap: 10px;
+}
+
+input[type="text"], 
+input[type="email"], 
+input[type="password"] {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #ccd0d5;
+    border-radius: 5px;
+    font-size: 15px;
+    background: #f5f6f7;
+    box-sizing: border-box;
+    color: #1c1e21;
+}
+
+/* Date and Gender Labels */
+.label-small {
+    font-size: 12px;
+    color: #606770;
+    margin-bottom: 5px;
+    display: block;
+    text-align: left;
+}
+
+.label-small i {
+    font-style: normal;
+    background: #606770;
+    color: white;
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    text-align: center;
+    line-height: 12px;
+    font-size: 10px;
+    cursor: pointer;
+}
+
+/* Birthday Selectors */
+.dob-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+select {
+    width: 33%;
+    padding: 8px;
+    border: 1px solid #ccd0d5;
+    border-radius: 4px;
+    font-size: 15px;
+    background-color: #fff;
+    color: #1c1e21;
+}
+
+/* Gender Radio Boxes */
+.gender-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.gender-box {
+    width: 33%;
+    border: 1px solid #ccd0d5;
+    border-radius: 4px;
+    padding: 8px;
+    display: flex;
+    justify-content: space-between; /* Puts label left, radio right */
+    align-items: center;
+    background-color: #fff;
+}
+
+.gender-box label {
+    font-size: 15px;
+    color: #1c1e21;
+    width: 100%;
+    cursor: pointer;
+}
+
+/* Disclaimer Text */
+.disclaimer {
+    font-size: 11px;
+    color: #777;
+    text-align: left;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+.disclaimer a {
+    color: #385898;
+    text-decoration: none;
+}
+
+.disclaimer a:hover {
+    text-decoration: underline;
+}
+
+/* Green Submit Button */
+button {
+    background-color: #42b72a; /* Facebook Green */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 50px; /* Wide padding */
+    cursor: pointer;
+    width: 200px; /* Not full width */
+    transition: background 0.2s;
+}
+
+button:hover {
+    background-color: #36a420;
+}
+
+/* Validation Error Styling */
+input.error-border, select.error-border, .gender-box.error-border {
+    border: 1px solid #b91c1c;
+    background-color: #fff0f0;
+}

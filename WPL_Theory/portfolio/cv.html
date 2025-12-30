@@ -1,0 +1,173 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfolio-ALIDANISH</title>
+       <style>
+        /* ===== Global Styles ===== */
+body {
+    font-family: Arial, sans-serif;
+    margin: 5%;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ===== Profile Section ===== */
+.profile-container {
+    display: flex;
+    flex-direction: row; /* side-by-side on larger screens */
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap; /* wrap on smaller screens */
+    margin-bottom: 20px;
+}
+
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #2563eb;
+    margin-bottom: 10px; /* space on small screens */
+}
+
+.profile-info h1 {
+    color: #444;
+    font-size: 2rem; /* scalable font */
+    margin: 0;
+}
+
+.profile-info p {
+    font-size: 1rem;
+    margin: 5px 0 0 0;
+}
+
+/* ===== Headings ===== */
+h2 {
+    color: #444;
+    font-size: 1.5rem;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 4px;
+    margin-top: 20px;
+}
+
+/* ===== Paragraphs ===== */
+p {
+    font-size: 1rem;
+}
+
+/* ===== Lists ===== */
+ul {
+    list-style-type: none; /* removes bullets */
+    padding-left: 0;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+/* ===== Links ===== */
+a {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ===== Footer ===== */
+footer p {
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* ===== Responsive Media Queries ===== */
+@media screen and (max-width: 600px) {
+    .profile-container {
+        flex-direction: column; /* stack image above text */
+        align-items: center;
+        text-align: center;
+    }
+
+    .profile-pic {
+        width: 100px;
+        height: 100px;
+    }
+
+    body {
+        margin: 10px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    p, li {
+        font-size: 0.95rem;
+    }
+}
+</style>
+
+    </head>
+    <body>
+        <img src="profilepic.jpg" alt="Ali Danish" class="profile-pic">
+        <hr>
+        <h1>Ali Danish</h1>
+        <p>Computer Science Student | Aspiring Backend Developer</p>
+
+        <section>
+        <h2>Contact information</h2>
+        <p>
+            📍 Karachi, Pakistan<br>
+            📞 03180143061<br>
+            📧 <a href="mailto:alidanish200430@gmail.com">alidanish200430@gmail.com</a><br>
+            🌐 <a href="https://github.com/alidanish8065">GitHub</a> |
+            <a href="https://www.linkedin.com/in/ali-danish-aa6159262">LinkedIn</a>
+        </p>
+        </section>
+        
+        <section>
+        <h2>Education</h2>
+        <p>Bachelor of Computer Science, Iqra University (2022 - 2026)<br>
+            Current CGPA: 3.51
+        </p>
+        <h2>💻 Skills</h2>
+        <ul>
+            <li>🧠 Programming: Python, C++, Java</li>
+            <li>🌐 Web Development: HTML, CSS, JavaScript, PHP</li>
+            <li>🗃️ Databases: SQL </li>
+            <li>🗣️ Languages: Urdu (Fluent), English (Workable)</li>
+        </ul>
+        </section>
+
+        <section>
+        <h2>🧩 Projects</h2>
+        <ul>
+            <li>🏥 Hospital Management System (SQL)</li>
+            <li>🎬 Cinema Management System (Python)</li>
+            <li>🚢 Data Analysis on Titanic Dataset</li>
+        </ul>
+        </section>
+
+
+        <section>
+        <h2>🎯 Interests & Hobbies</h2>
+        <ul>
+            <li>📚 Reading novels and literature</li>
+            <li>🤖 Learning AI and automation</li>
+            <li>🎨 Designing webpages</li>
+        </ul>
+        </section>
+
+
+        <footer>
+            <p style = "text-align: center;">© 2025 Ali Danish. All Rights Reserved.</p>
+        </footer>
+    </body>
+</html>

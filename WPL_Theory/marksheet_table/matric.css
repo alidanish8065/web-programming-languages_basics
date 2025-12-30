@@ -1,0 +1,64 @@
+/* Font imports */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+/* Base styles for the body */
+body {
+    font-family: 'Open Sans', Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Main heading style with decorative font */
+h1:first-of-type {
+    font-family: "Old English Text MT", "Blackletter", "Goudy Old Style", fantasy, serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+/* Regular heading styles */
+h1:not(:first-of-type), h2, h3 {
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-weight: 700;
+}
+
+h1 { font-size: 2.5rem; margin-bottom: 0.1rem; }
+h2 { font-size: 2rem; margin-bottom: 0.1rem; }
+h3 { font-size: 1rem; margin-bottom: 0.1rem; }
+
+/* Paragraph styles */
+p {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    font-family: 'Open Sans', Arial, sans-serif;
+}
+/* Link styles */
+a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Text formatting classes */
+.text-center {
+    text-align: center;
+}
+
+.text-bold {
+    font-weight: 700;
+}
+
+.text-italic {
+    font-style: italic;
+}
+.marksheet-table {
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+}
+.student-info {
+    margin: 5px 0;
+}
