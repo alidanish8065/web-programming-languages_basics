@@ -1,0 +1,50 @@
+# Project Documentation: University LMS
+
+## Overview
+This project is a Learning Management System (LMS) designed for a university environment. It manages various user roles (Students, Faculty, Admin) and core academic functionalities like Course Management, Enrollment, and Grading.
+
+## Database Structure
+The system is built on a MySQL database `LMS` with the following key components:
+
+### User Management
+- **users**: Central table for all users (stores login credentials `user_code`, `email`, `password_hash`).
+- **roles**: Defines available roles (student, faculty, admin, etc.).
+- **user_roles**: Links users to roles (Many-to-Many).
+- **student**: Extended profile for students (linked to `users.id`), stores `program_id`, `student_number`.
+- **teacher**: Extended profile for faculty (linked to `users.id`), stores `department_id`, `employee_number`.
+
+### Academic Structure
+- **department**: Academic departments (e.g., Computer Science).
+- **program**: Degree programs (e.g., BSCS, BSIT).
+- **course**: Course catalog.
+- **course_offering**: Specific instances of courses offered in a semester.
+- **enrollment**: Student course registrations.
+
+## Codebase Structure
+The project follows a procedural PHP structure with some organization into folders:
+
+- **public/**: Public-facing files.
+    - `dbconfig.php`: Database connection settings.
+    - `login.php`: Main authentication logic.
+    - `adminaccess.php`: Tool to create the first admin account.
+- **roles/**: Dashboard and logic for different user roles.
+    - `student/`: Student-specific pages (`dashboard.php`).
+    - `faculty/`: Faculty-specific pages (Currently Missing).
+    - `admin/`: Admin-specific pages (`dashboard.php`).
+- **admin_tools/**: Utilities for administrators.
+    - `User/`: User management (Create, Edit, List, Delete).
+- **templates/**: Shared layout files (Navbar, Footer, Master Base).
+
+## Current Status (Analysis)
+- **Database Compatibility**: The database schema is robust and normalized.
+- **Authentication**: `login.php` correctly joins `users` and `roles` tables to authenticate.
+- **Missing Components**: 
+    - The `roles/Faculty` directory does not exist.
+    - `roles/Student/dashboard.php` contains hardcoded/placeholder data.
+    - `roles/admin/dashboard.php` needs updates to display relevant admin statistics.
+
+## Setup Instructions
+1. Import `LMS DATABASE.txt` into your MySQL database.
+2. Configure `public/dbconfig.php` with your database credentials.
+3. Use `public/adminaccess.php` to create your initial Super Admin or Admin account.
+4. Login via `public/login.html`.

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+
+  <form onsubmit="return DataPrint()">
+    <label>First Number:</label>
+    <input type="number" id="num1" placeholder="Enter first number" required><br><br>
+
+    <label>Second Number:</label>
+    <input type="number" id="num2" placeholder="Enter second number" required><br><br>
+
+    <label>Choose Operation:</label><br>
+    <input type="radio" name="op" value="add" required> Add <br>
+    <input type="radio" name="op" value="sub"> Subtract <br>
+    <input type="radio" name="op" value="mul"> Multiply <br>
+    <input type="radio" name="op" value="div"> Divide <br><br>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <h3>Result: <span id="result"></span></h3>
+
+  <script>
+    function DataPrint() {
+      var num1 = Number(document.getElementById("num1").value);
+      var num2 = Number(document.getElementById("num2").value);
+      var result = document.getElementById("result");
+      var op = document.querySelector('input[name="op"]:checked').value;
+
+      if (op === "add") {
+        result.textContent = num1 + num2;
+      } else if (op === "sub") {
+        result.textContent = num1 - num2;
+      } else if (op === "mul") {
+        result.textContent = num1 * num2;
+      } else if (op === "div") {
+        if (num2 === 0) {
+          result.textContent = "Cannot divide by 0";
+        } else {
+          result.textContent = num1 / num2;
+        }
+      }
+
+      return false; // Prevent form from reloading
+    }
+  </script>
+</body>
+</html>

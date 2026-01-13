@@ -1,0 +1,36 @@
+# Implementation Plan: Database Compatibility
+
+## Goal
+Align the PHP codebase with the `LMS DATABASE.txt` schema, specifically fixing Dashboards and User Management.
+
+## Planned Changes
+
+### 1. Database & Auth
+- **File**: `public/login.php`
+- **Action**: Verify session data population (`student_id`, `department_id`) for correct redirection.
+
+### 2. Faculty Module (New)
+- **File**: `roles/Faculty/dashboard.php`
+- **Action**: Create this file.
+- **Logic**: Fetch `teacher` details and assigned courses from `course_teacher` table.
+
+### 3. Student Module
+- **File**: `roles/Student/dashboard.php`
+- **Action**: Refactor to use real data.
+- **Logic**: Query `enrollment` JOIN `course_offering` JOIN `course` to show enrolled classes.
+
+### 4. Admin Module
+- **File**: `roles/admin/dashboard.php`
+- **Action**: Update statistics.
+- **Logic**: Count total `users`, `student`, `teacher`, `course`.
+
+### 5. User Management
+- **File**: `admin_tools/User/create_user.php`
+- **Action**: Validate multi-table inserts (`users` + `student`/`teacher`).
+- **File**: `admin_tools/User/user_list.php`
+- **Action**: Fix display query to join `roles` correctly.
+
+## Verification Steps
+1. **Login** as Admin, Student, and Faculty.
+2. **Check Dashboards** for accurate data (no errors).
+3. **Create User** and verify they appear in the database multiple tables.
