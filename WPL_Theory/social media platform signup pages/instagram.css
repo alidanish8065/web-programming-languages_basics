@@ -1,0 +1,79 @@
+/* FILE: common.css */
+body {
+    font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+    background: #000000; /* Black Background */
+    margin: 0;
+    padding: 0;
+    color: #222;
+    /* Centers the card vertically and horizontally */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    max-width: 350px; /* Made slightly narrower to match IG look */
+    width: 100%;
+    padding: 30px 40px;
+    background: #080808; /* White Card */
+    border-radius: 2px; /* Sharper corners like IG */
+    box-shadow: 0 6px 20px rgba(17, 24, 39, 0.06);
+    text-align: center;
+}
+
+/* --- NEW LOGO STYLE --- */
+.instagram-logo {
+    font-family: 'Lobster', cursive; /* The Font you wanted */
+    font-size: 20px;
+    margin: 0 0 20px 0;
+    color: #ffffff;
+    text-align: center;
+}
+
+.instagram-logo img {
+    max-width: 120px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 9px 8px; /* Adjusted padding */
+    border: 1px solid #dbdbdb;
+    border-radius: 3px;
+    font-size: 14px;
+    margin-bottom: 6px; /* Tighter spacing */
+    box-sizing: border-box; /* Ensures padding doesn't break width */
+    background: #fafafa; /* Very light grey input background */
+}
+
+button {
+    margin-top: 12px;
+    padding: 8px 14px;
+    border-radius: 4px;
+    border: 0;
+    font-weight: 600;
+    cursor: pointer;
+    /* Added Instagram Button Styles */
+    background-color: #0095f6;
+    color: white;
+    width: 100%;
+    font-size: 14px;
+}
+
+/* Optional hover effect for button */
+button:hover {
+    background-color: #1877f2;
+}
+
+.helper {
+    font-size: 13px;
+    color: #6b7280;
+    margin-top: 6px;
+}
+
+small.error {
+    color: #b91c1c;
+}
